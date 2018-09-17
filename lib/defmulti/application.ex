@@ -10,7 +10,7 @@ defmodule Defmulti.Application do
     children = [
       # Starts a worker by calling: Defmulti.Worker.start_link(arg)
       # {Defmulti.Worker, arg},
-      {Defmulti.EtsManager, []}
+      {Defmulti.MethodRegistrar, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

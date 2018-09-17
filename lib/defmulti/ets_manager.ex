@@ -1,15 +1,7 @@
-defmodule Defmulti.EtsManager do
+defmodule Defmulti.MethodRegistrar do
   use GenServer
-  # use Defmulti.Proxy
+  @external_resource "buildfile"
 
-  # defmacro __using__(_) do
-  #   quote do
-  #     # import Defmulti, only: [defmulti: 2, defmethod: 2]
-  #     # Module.register_attribute(__MODULE__, :methods, accumulate: true, persist: true)
-  #     # @before_compile Defmulti
-  #     # @on_load :register_methods
-  #   end
-  # end
   def start_link(args) do
     GenServer.start_link(__MODULE__, args, name: __MODULE__)
   end
@@ -34,6 +26,5 @@ defmodule Defmulti.EtsManager do
     IO.inspect("defmulti ets table is started")
 
     {:ok, s}
-    # {:ok, []}
   end
 end

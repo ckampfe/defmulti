@@ -1,8 +1,4 @@
 defmodule Defmulti do
-  @external_resource "buildfile"
-  @before_compile Defmulti.Helper
-
-  #
   defmacro __using__(_) do
     quote do
       @external_resource "buildfile"
